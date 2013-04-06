@@ -1,0 +1,166 @@
+<?php
+
+
+
+function tcompactmenu_theme() {
+	
+	return array(
+		'tcompactmenu_block' => array(
+			'variables' => array(
+				'urls' => NULL
+			),
+			'file' => 'tcompactmenu.block.inc',
+			'template' => 'tcompactmenu-block',
+		)
+	);
+}
+
+/**
+ * Implementation of hook_menu
+ */
+function tcompactmenu_menu() {
+  
+  $items = array();
+  
+  $items['admin/config/user-interface/tcompactmenu'] = array(
+    'title' => 'Tcompactmenu',
+    'description' => 'Configure the Tcompactmenu.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tcompactmenu_settings'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    //'file' => 'tcompactmenu.admin.inc',
+  );
+
+  return $items;
+}
+
+
+function _tcompactmenu_get_urls(){
+
+	$select = db_select('tcompactmenu','tc');
+	$select->addField('tc','id');
+	$select->addField('tc','url');
+	
+	$entries = $select->execute()->fetchAll();
+	
+	$str = "";
+	foreach($entries as $num => $entrie){
+		$str.= $entrie->url.",";
+	}
+	
+	$str = substr($str, 0, strlen($str)-1);
+	
+	return trim($str);
+}
+
+function tcompactmenu_settings() {
+  
+  //$form['#tree']=TRUE;
+    
+  //var_dump($tc_menu); exit;
+	
+	// -- ÍÅÄÎÄÅËÀÍÍÛÉ ÂÀÐÈÀÍÒ Ñ ÌÅÍÞ Â ÊÀ×ÅÑÒÂÅ ÈÑÒÎ×ÍÈÊÀ ÑÑÛËÎÊ --
+	
+	//$tc_menu = variable_get('tcompactmenu_menu', 0);
+	
+	//çäåñü ïîòîì äîñòàòü êàê-íèáóäü âñå ñóùåñòâóþùèå ìåíþ (íàçâàíèÿ, id)
+	/* $menus = array(
+		'1' => 'Menu1', 
+		'2' => 'Menu2'
+	); */
+	
+	/*$menus = menu_get_menus(false);
+	$links = menu_load_links('menu--mypredlagaem');
+	echo "<pre>";
+	var_dump($menus); var_dump($links); exit; */
+	
+	
+	/* $form['menuid'] = array(
+		'#type' => 'radios',
+		'#title' => t('Linked menu'),
+		'#options' => $menus,
+		'#default_value' => '1',
+		'#description' => t('Will set up a block of links based on this menu'),
+	);	 */
+	
+	// -- ÍÅÄÎÄÅËÀÍÍÛÉ ÂÀÐÈÀÍÒ Ñ ÌÅÍÞ Â ÊÀ×ÅÑÒÂÅ ÈÑÒÎ×ÍÈÊÀ ÑÑÛËÎÊ --
+	
+	$form['urls'] = array(
+      '#title' =>  t('Specify a set of URLs'),
+	  '#description' => t('URLs should be separated by commas'),
+      '#type' => 'textarea',
+      '#default_value' => _tcompactmenu_get_urls(),
+    );
+	
+  //êíîïêà îòïðàâêè äàííûõ ôîðìû
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save tcompactmenu settings'),
+  );
+
+  return $form;
+}
+
+function tcompactmenu_settings_submit($form, &$form_state){
+	
+	$urls = $form_state['values']['urls'];
+	
+	//echo $urls; exit;
+	//$fields = array('url' => $urls);
+	//db_insert('tcompactmenu')->fields($fields)->execute();
+	
+	$urls_array = explode(",", $urls);
+	
+	//î÷èùàåì òàáëèöó
+	db_delete('tcompactmenu')->execute();
+	
+	$fields = array();
+	
+	foreach($urls_array as $url){
+		$fields['url'] = trim($url);
+		db_insert('tcompactmenu')->fields($fields)->execute();
+	}
+	
+	drupal_set_message(t('The tcompactmenu settings saved'));
+}
+
+/**
+ * îïèñàíèå áëîêà, ïîðîæäàåìîãî ìîäóëåì
+*/
+function tcompactmenu_block_info(){
+   
+   $blocks = array();
+   
+   $blocks[0]['info'] = t('Tcompactmenu links block');
+   $blocks[0]['cache'] = DRUPAL_NO_CACHE;
+    
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ */
+function tcompactmenu_block_view($delta = '') {
+	
+	//ÏÈËÈÒÜ ÇÄÅÑÜ...
+	//Äîñòàíåì çäåñü âñå ññûëêè èç áä è ïåðåäàäèì èõ â øàáëîí
+	// Â ïåðåñïåêòèâå ìîæíî ñäåëàòü íàñòðîéêó áëîêà - òèïà êëàññ äëÿ ññûëêè íåàêòèâíîé è àêòèâíîé
+	
+	$select = db_select('tcompactmenu','tc');
+	$select->addField('tc','id');
+	$select->addField('tc','url');
+	
+	$entries = $select->execute()->fetchAll();
+	
+	/* echo "<pre>";
+	print_r($entries);
+	echo "</pre>"; exit; */
+	
+	$blocks = array();
+	$blocks['subject'] = null;
+	$blocks['content'] = theme('tcompactmenu_block', array('urls' => $entries));
+
+	return $blocks;
+}

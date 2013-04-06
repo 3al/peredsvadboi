@@ -1,0 +1,17 @@
+<?php
+
+function tcompactmenu_uninstall() {
+  cache_clear_all('tcompactmenu','cache',TRUE);
+  menu_rebuild();
+}
+
+function tcompactmenu_schema() {
+  $schema['tcompactmenu'] = array(
+    'fields' => array(
+      'id' => array('type' => 'serial', 'not null' => TRUE),
+      'url' => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE)
+    ),
+   'primary key' => array('id'),
+  );
+  return $schema;
+}

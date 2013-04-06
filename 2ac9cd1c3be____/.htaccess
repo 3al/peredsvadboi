@@ -1,0 +1,9 @@
+DirectoryIndex main.php
+
+AddDefaultCharset Windows-1251
+
+php_flag register_globals off
+
+RewriteEngine on
+
+RewriteRule log$ nofile.htm

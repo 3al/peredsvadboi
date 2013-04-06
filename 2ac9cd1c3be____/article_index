@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html dir="ltr" version="XHTML+RDFa 1.0" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<head>
+		<base href="http://peredsvadboi.ru" />
+		<meta content="text/html; charset=windows-1251" http-equiv="Content-Type" />
+		<meta about="/pered-svadboy-mnogo-hlopot" content="0" datatype="xsd:integer" property="sioc:num_replies" />
+		<meta about="/pered-svadboy-mnogo-hlopot" content="Перед свадьбой много хлопот" property="dc:title" />
+		<link href="/pered-svadboy-mnogo-hlopot" rel="canonical" />
+		<meta content="Drupal 7 (http://drupal.org)" name="Generator" />
+		<link href="/node/7" rel="shortlink" />
+		<title>Перед свадьбой много хлопот | Перед свадьбой</title>
+		<link href="http://peredsvadboi.ru/sites/default/files/css/css_5XB5aQOGzDUVxnwtHDXg0AJDjmjZbe2Sh1K2BEkR5cM.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="http://peredsvadboi.ru/sites/default/files/css/css_TsVRTbLFUpEZAfw-_bWPJu840QT523CPjUVJ5MRWfyk.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="http://peredsvadboi.ru/sites/default/files/css/css_MnXiytJtb186Ydycnpwpw34cuUsHaKc80ey5LiQXhSY.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="http://peredsvadboi.ru/sites/default/files/css/css_wMz_J3lq0KOwkJ4GfUdbF6V4rKLqEV9Wt5XzI6jmsn8.css" media="all" rel="stylesheet" type="text/css" />
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="http://peredsvadboi.ru/sites/all/themes/mayo/css/ie.css?lowdor" media="all" />
+<![endif]--><!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="http://peredsvadboi.ru/sites/all/themes/mayo/css/ie6.css?lowdor" media="all" />
+<![endif]-->		<link href="http://peredsvadboi.ru/sites/default/files/css/css_HKhOYu5JbzI0qj5bc7GfNwpmD0incd5VdnPC7b1Hw7I.css" media="all" rel="stylesheet" type="text/css" />
+		<style media="all" type="text/css">
+<!--{cke_protected}{C}%3C!%2D%2D%2F*%2D%2D%3E--><![CDATA[/*><!--{cke_protected}{C}%3C!%2D%2D*%2F%0Abody%7Bfont-size%3A87.5%25%3Bfont-family%3AGeorgia%2C'Palatino%20Linotype'%2C'Book%20Antiqua'%2C'URW%20Palladio%20L'%2CBaskerville%2CMeiryo%2C'Hiragino%20Mincho%20Pro'%2C'MS%20PMincho'%2Cserif%3B%7D%0Ah1%2Ch2%2Ch3%2Ch4%2Ch5%7Bfont-family%3AGeorgia%2C'Palatino%20Linotype'%2C'Book%20Antiqua'%2C'URW%20Palladio%20L'%2CBaskerville%2CMeiryo%2C'Hiragino%20Mincho%20Pro'%2C'MS%20PMincho'%2Cserif%3B%7D%0A%0A%2F*%5D%5D%3E*%2F%2D%2D%3E-->		</style>
+<script type="text/javascript" src="http://peredsvadboi.ru/sites/default/files/js/js_OUYbOVdgpVsXOdB2zFglWtxDbaBrvQlNhLOq45JrbmE.js"></script><script type="text/javascript" src="http://peredsvadboi.ru/sites/default/files/js/js_yxbemXxyp41pUSTWl0COWwjEuBI5d94e9jTZQPGfQZQ.js"></script><script type="text/javascript" src="http://peredsvadboi.ru/sites/default/files/js/js_AHyBAYZMC0aoLby7IhzDcekyKo2__10bztcN6PSiv_g.js"></script><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"/","pathPrefix":"","ajaxPageState":{"theme":"mayo","theme_token":"7sm7YMKxves-luyFX3LDfZh92J7qsZBWchAqbOpRo8Y","js":{"misc/jquery.js":1,"misc/jquery.once.js":1,"misc/drupal.js":1,"public://languages/ru_VAY0ddBUoUCrHJ8h05i3NHNUTuxQ0MqE4xFaNMQjCb0.js":1,"sites/all/modules/views/js/jquery.ui.dialog.patch.js":1},"css":{"modules/system/system.base.css":1,"modules/system/system.menus.css":1,"modules/system/system.messages.css":1,"modules/system/system.theme.css":1,"modules/comment/comment.css":1,"modules/field/theme/field.css":1,"modules/node/node.css":1,"modules/search/search.css":1,"modules/user/user.css":1,"sites/all/modules/views/css/views.css":1,"sites/all/modules/ctools/css/ctools.css":1,"sites/all/themes/mayo/css/layout.css":1,"sites/all/themes/mayo/css/style.css":1,"sites/all/themes/mayo/css/colors.css":1,"sites/all/themes/mayo/css/ie.css":1,"sites/all/themes/mayo/css/ie6.css":1,"sites/all/themes/mayo/css/round-sidebar.css":1,"sites/all/themes/mayo/css/round-node.css":1,"0":1,"1":1}}});
+//--><!]]>
+</script>	</head>
+	<body class="html front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-7 node-type-page">
+		<div id="skip-link">
+			<a class="element-invisible element-focusable" href="#main-content">Перейти к основному содержанию</a></div>
+		<div id="page-wrapper" style="width: 90%; margin-top: 14px; margin-bottom: 14px;">
+			<div id="page" style="">
+				<div id="header" style="height: 90px;border: none;">
+					<div id="header-watermark" style="background-image: url(/sites/all/themes/mayo/images/pat-4.png);">
+						<div class="section clearfix">
+							<div id="logo" style="padding-left: 20px; padding-top: 15px;">
+								<a href="/" rel="home" title="Главная"> <img alt="Главная" src="http://peredsvadboi.ru/sites/default/files/i_1.jpg" /> </a></div>
+<!-- /#logo -->							<div id="name-and-slogan" style="padding-left: 20px; padding-top: 15px;">
+								<div id="site-name">
+									<strong><a href="/" rel="home" title="Главная"><span>Перед свадьбой</span></a> </strong></div>
+								<div id="site-slogan">
+									Организация свадеб, венчаний, банкетов. Все для невесты!</div>
+							</div>
+<!-- /#name-and-slogan -->							<div id="header-searchbox" style="padding-right: 15px; padding-top: 20px;">
+								&nbsp;</div>
+							<div class="clearfix">
+								&nbsp;</div>
+						</div>
+<!-- /.section -->					</div>
+<!-- /#header-watermark -->				</div>
+<!-- /#header -->				<div id="navigation">
+					<div class="section">
+						<ul class="links inline clearfix" id="main-menu">
+							<li class="menu-198 first active">
+								<a class="active" href="/" title="">Главная</a></li>
+							<li class="menu-482">
+								<a href="/contact" title="Обратная связь">Напишите нам!</a></li>
+							<li class="menu-418">
+								<a href="/svadebnye-aksessuary" title="Необходимые мелочи для свадьбы">Свадебные аксессуары</a></li>
+							<li class="menu-495 last">
+								<a href="/infodir" title="Публикации нашего сайта">Публикации</a></li>
+						</ul>
+					</div>
+				</div>
+<!-- /.section, /#navigation --><!-- for nice_menus, superfish --><!-- space between menus and contents -->				<div id="main-wrapper">
+					<div class="clearfix" id="main" style="padding: 0px 10px;">
+<!-- /#top-wrapper -->						<div class="clearfix">
+							&nbsp;</div>
+<!-- sidebars (left) -->						<div class="column sidebar" id="sidebar-first" style="width: 25%;">
+							<div class="section" style="margin-left: 0px; margin-right: 5px;">
+								<div class="region region-sidebar-first">
+									<div class="block block-menu" id="block-menu-menu-mypredlagaem">
+										<h2>
+											Публикации</h2>
+										<div class="content">
+											<ul class="menu">
+												<ul>
+<li><a href="/remont/">Строительство и благоустройство</a></li>
+<li><a href="/pranks-information/">Развлечения</a></li>
+<li><a href="/artists/">Музыканты и mp3</a></li>
+<li><a href="/benefitsindustry/">Другие услуги, товары</a></li>
+<li><a href="/kittenonline/">Животные</a></li>
+<li><a href="/statical-content/">Продать виллу</a></li>
+<li><a href="/incidentallypress/">Другое</a></li>
+<li><a href="/magazines-sites/">Новости и СМИ</a></li>
+<li><a href="/biophysicsindustry/">Видео аппаратура, кондиционеры</a></li>
+<li><a href="/articlescars/">Автомобили</a></li>
+<li><a href="/drinks/">Еда и питье</a></li>
+</ul>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+<!-- /.section, /#sidebar-first --><!-- main content -->						<div class="column" id="content" style="width: 75%;">
+							<div class="section" style="margin-left: 5px; margin-right: 0px;">
+								<h1 class="title" id="page-title">
+									Публикации</h1>
+								<div class="tabs">
+									&nbsp;</div>
+								<div class="region region-content">
+									<div class="block block-system" id="block-system-main">
+										<div class="content">
+											<div about="/pered-svadboy-mnogo-hlopot" class="node node-page clearfix" id="node-7" typeof="foaf:Document">
+												<div class="content">
+													<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+														<div class="field-items">
+															<div class="field-item even" property="content:encoded">
+																<p><h1><a href="/remont/" style="font-size:22px">Строительство и благоустройство</a></h1></p>
+<p><a href="/remont/5.html" >За что я люблю дачу</a>
+<br>Дачные хлопоты в радость.</p>
+<p><h1><a href="/pranks-information/" style="font-size:22px">Развлечения</a></h1></p>
+<p><a href="/pranks-information/12.html" >Музыка... Это величайшее из искусств. Монтаж и прокладка кабеля</a>
+<br>Музыка. . . </p>
+<p><a href="/pranks-information/13.html" >Интернет-журнал про рыбалку</a>
+<br>Позвольте представить вам журнал о рыбалке.  "Подумаешь, всего лишь еще один сайт о рыбалке!" - иронично воскликните Вы, и будете неправы.  И рыболовы-любители, и бывалые профессионалы найдут на этом сайте море полезной информации. </p>
+<p><h1><a href="/artists/" style="font-size:22px">Музыканты и mp3</a></h1></p>
+<p><a href="/artists/2.html" >Музыкальный мир. Лучшие фильмы он-лайн</a>
+<br>Музыкальный мир Чаще всего, именно музыка заставляет людей мыслить по-другому.  Она способна улучшить настроение, тогда, когда это требуется, поддержать и утешить.  Но для меломанов все-таки мало просто прослушивать приятную музыку. </p>
+<p><h1><a href="/benefitsindustry/" style="font-size:22px">Другие услуги, товары</a></h1></p>
+<p><a href="/benefitsindustry/9.html" >SystemKey.ru — дверные замки. Портал по пошиву чехлов для автомобиля</a>
+<br>SystemKey. ru — дверные замки Организация System Key существует на российском рынке уже более восьми лет.  Направление предприятия ориентирована на реализацию и ремонт замков для дверей. </p>
+<p><h1><a href="/kittenonline/" style="font-size:22px">Животные</a></h1></p>
+<p><a href="/kittenonline/7.html" >Порода собаки и характер ее хозяина</a>
+<br>Порода собаки и характер ее хозяина Породасобаки раскрывает личностные особенности ее владельца.  Интернет-ресурс Dogjournal рассказывает про все породы собак, содержит множество полезной информации для любителей и хозяев домашних питомцев, в том числе: статьи, свежие новости, фото и видео, картинки с животными и многое другое. </p>
+<p><h1><a href="/statical-content/" style="font-size:22px">Продать виллу</a></h1></p>
+<p><a href="/statical-content/17.html" >Организация покупки квартиры на рынке вторичного жилья</a>
+<br>На рынке старого жилищного фонда вы сможете подобрать для покупки недвижимость и сразу жить в ней. Существенный минус на рынке «поддержанного» жилья – состояние дома. Внутри своей квартирки бесспорно можно создать то, что душа желает, включая замену перекрытий, при этом здание отремонтировать невозможно. Часто имеются скрытые дефекты и т.д., которые при этом проблематично рассмотреть.</p>
+<p><h1><a href="/incidentallypress/" style="font-size:22px">Другое</a></h1></p>
+<p><a href="/incidentallypress/11.html" >Отдых на Ибице. Лучшие курорты Азии. Все о Китае</a>
+<br>Отдых на Ибице Ибица – это солнечный отрезок нашей Земли.  Наверное, у любой страны имеется свое необычное место, где и правда приятно находится.  Однако Ибица остается универсальным местом отдыха для самой разной местности. </p>
+<p><h1><a href="/magazines-sites/" style="font-size:22px">Новости и СМИ</a></h1></p>
+<p><a href="/magazines-sites/6.html" >Тюнинг японских автомобилей своими руками</a>
+<br>Интересуетесь тюнингом JDM? Тогда сайт все о тюнинге – то, что будет вам интересно ! Интернет портал – это единственный проект, который соединил воедино множество занятной и полезной информации о japan domestic market style tuning.  На данном портале вы обнаружите уникальные статьи и видеоролики о модификациях, доводке японских автомобилей, которые проблематично отыскать на других ресурсах. </p>
+<p><a href="/magazines-sites/8.html" >Украинский автомобильный информационный портал. Венерические недуги – вполне возможно предотвратить, и намного эффективнее лечить на первом этапе! Любопытные фа</a>
+<br>Украинский автомобильный информационный портал Представляем Вашему вниманию украинский информационный сайт ukrauto. info! Это самый лучший портал в интернет сети, посвящающийся самым разным новостям автомобильного мира. </p>
+<p><h1><a href="/biophysicsindustry/" style="font-size:22px">Видео аппаратура, кондиционеры</a></h1></p>
+<p><a href="/biophysicsindustry/15.html" >Все о кондиционировании</a>
+<br>Все о кондиционировании Для совершенного контролирования температуры в Вашем собственном доме, обращайтесь в организацию Глобал Климат.  Вот уже четыре года она работает над продажей климатического оборудования. </p>
+<p><h1><a href="/articlescars/" style="font-size:22px">Автомобили</a></h1></p>
+<p><a href="/articlescars/4.html" >Автомобили и мотоциклы</a>
+<br>Лучше ралли может быть только ралли, на котором еще не был Добро пожаловать на сайт www. obavtosporte. ru. </p>
+<p><a href="/articlescars/3.html" >Производственно-дизайнерская студия «Мега-Кристаль»</a>
+<br>Сайт о создании авточехлов Если Вы собственник автомобиля, то, конечно, заботитесь о Вашем автомобиле, как о живом.  Что-то добавить в автомобиль, сделать более чем приятным езду – все это обычное правило. </p>
+<p><h1><a href="/drinks/" style="font-size:22px">Еда и питье</a></h1></p>
+<p><a href="/drinks/10.html" >Полезные блюда. Сайт о хостинге</a>
+<br>Полезные блюда Добро пожаловать на самый лучший кулинарный сайт в интернете coookboook. com! Всем давно известна старая поговорка, о желудке мужчины и о его сердце.  Замечательная хозяйка просто обязана знать несколько рецептов, которые поразят сердце Вашего мужчины. </p>
+ <!--0DAEA8B81EC1200101CA5BFB6E3CF252--></div>
+														</div>
+													</div>
+												</div>
+<!-- moved to outside of the node div -->											</div>
+<!-- added -->										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+<!-- /.section, /#content --><!-- sidebars (right) -->						<div class="clearfix">
+							&nbsp;</div>
+						<div id="bottom-wrapper">
+							<div class="clearfix" id="bottom-columns">
+								&nbsp;</div>
+<!--/#bottom-columns -->						</div>
+<!-- /#bottom-wrapper -->						<div class="clearfix">
+							&nbsp;</div>
+					</div>
+<!-- /#main -->				</div>
+<!-- /#main-wrapper --><!-- space between contents and footer -->				<div class="clearfix" id="spacer">
+					&nbsp;</div>
+				<div id="footer-wrapper">
+					<div class="clearfix" id="footer-columns">
+						<div class="column-blocks clearfix">
+							<div class="column-block-wrapper" style="width: 50%;">
+								<div class="column-block" style="margin-left: 0px;margin-right: 5px;">
+									<div class="region region-footer-column-first">
+										<div class="block block-block" id="block-block-1">
+											<div class="content">
+<!-- Yandex.Metrika informer -->												<p>
+													<a href="http://metrika.yandex.ru/stat/?id=7950373&amp;from=informer" rel="nofollow" target="_blank"><img alt="Яндекс.Метрика" src="//bs.yandex.ru/informer/7950373/2_1_FFADFFFF_EA8DF7FF_0_uniques" style="width:80px; height:31px; border:0;" title="Яндекс.Метрика: данные за сегодня (уникальные посетители)" /></a></p>
+<!-- /Yandex.Metrika informer --><!-- Yandex.Metrika counter -->												<div style="display:none;">
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+(function(w, c) {(w[c] = w[c] || []).push(function() {try {w.yaCounter7950373 = new Ya.Metrika({id:7950373, enableAll: true});} catch(e) { }});})(window, 'yandex_metrika_callbacks');
+//--><!]]>
+</script>												</div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>												<p>
+													&nbsp;</p>
+<noscript>
+<div><img src="//mc.yandex.ru/watch/7950373" style="position:absolute; left:-9999px;" alt="" /></div>
+<p></p></noscript><!-- /Yandex.Metrika counter -->											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+<!--/.column-block --><!--/.column-block-wrapper-->							<div class="column-block-wrapper" style="width: 50%;">
+								<div class="column-block" style="margin-left: 5px;margin-right: 0px;">
+									<div class="region region-footer-column-second">
+										<div class="block block-block" id="block-block-2">
+											<div class="content">
+												<p>
+													В случае перепечатки материалов обязательно наше письменное разрешение и прямая индексируемая ссылка на Peredsvadboi.ru<br />
+													Перед свадьбой. Инструктаж невесты. &copy; 2010-2011</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+<!--/.column-block --><!--/.column-block-wrapper-->						</div>
+<!--/.column-blocks-->					</div>
+<!--/#footer-columns -->				</div>
+<!-- /#footer-wrapper -->			</div>
+<!-- /#page -->		</div>
+<!-- /#page-wrapper -->	</body>
+</html>

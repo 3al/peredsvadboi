@@ -1,0 +1,9 @@
+; $Id$
+name = Tcompactmenu
+description = Makes a compact menu that looks like a block of numbered links.
+dependencies[] = menu
+package = "Tpackage"
+core = 7.x
+version = "7.x-1.0"
+configure = admin/config/user-interface/tcompactmenu
+files[]= tcompactmenu.module

@@ -1,0 +1,316 @@
+#
+# Apache/PHP/Drupal settings:
+#
+
+# Protect files and directories from prying eyes.
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$">
+  Order allow,deny
+</FilesMatch>
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+# Follow symbolic links in this directory.
+Options +FollowSymLinks
+
+# Make Drupal handle any 404 errors.
+ErrorDocument 404 /index.php
+
+# Force simple error message for requests for non-existent favicon.ico.
+<Files favicon.ico>
+  # There is no end quote below, for compatibility with Apache 1.3.
+  ErrorDocument 404 "The requested file favicon.ico was not found.
+</Files>
+
+# Set the default handler.
+DirectoryIndex index.php index.html index.htm
+
+# Override PHP settings that cannot be changed at runtime. See
+# sites/default/default.settings.php and drupal_initialize_variables() in
+# includes/bootstrap.inc for settings that can be changed at runtime.
+
+# PHP 5, Apache 1 and 2.
+<IfModule mod_php5.c>
+  php_flag magic_quotes_gpc                 off
+  php_flag magic_quotes_sybase              off
+  php_flag register_globals                 off
+  php_flag session.auto_start               off
+  php_value mbstring.http_input             pass
+  php_value mbstring.http_output            pass
+  php_flag mbstring.encoding_translation    off
+</IfModule>
+
+# Requires mod_expires to be enabled.
+<IfModule mod_expires.c>
+  # Enable expirations.
+  ExpiresActive On
+
+  # Cache all files for 2 weeks after access (A).
+  ExpiresDefault A1209600
+
+  <FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior. This may
+    # fail if an error occurs early in the bootstrap process, and it may cause
+    # problems if a non-Drupal PHP file is installed in a subdirectory.
+    ExpiresActive Off
+  </FilesMatch>
+</IfModule>
+
+# Various rewrite rules.
+
+
+#Linkfeed Articles
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^pubs/[0-9]{1,4}/date_m}/[0-9]{1,2}/([0-9]+)$ /16fc757b69b5f70d8a7e93768bbb3cca04ea90bd/16fc757b69b5f70d8a7e93768bbb3cca04ea90bd.php [L]
+</IfModule>
+
+
+
+RewriteRule ^infodir/?$ /2ac9cd1c3be/ [L]
+RewriteRule ^remont/?$ /2ac9cd1c3be/remont.html [L]
+RewriteRule ^remont/(\d+)/?$ /2ac9cd1c3be/remont_$1.html [L]
+RewriteRule ^remont/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^portuguese_companies/?$ /2ac9cd1c3be/portuguese_companies.html [L]
+RewriteRule ^portuguese_companies/(\d+)/?$ /2ac9cd1c3be/portuguese_companies_$1.html [L]
+RewriteRule ^portuguese_companies/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^pranks-information/?$ /2ac9cd1c3be/pranks-information.html [L]
+RewriteRule ^pranks-information/(\d+)/?$ /2ac9cd1c3be/pranks-information_$1.html [L]
+RewriteRule ^pranks-information/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^artists/?$ /2ac9cd1c3be/artists.html [L]
+RewriteRule ^artists/(\d+)/?$ /2ac9cd1c3be/artists_$1.html [L]
+RewriteRule ^artists/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^adult/?$ /2ac9cd1c3be/adult.html [L]
+RewriteRule ^adult/(\d+)/?$ /2ac9cd1c3be/adult_$1.html [L]
+RewriteRule ^adult/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^polygraphpress/?$ /2ac9cd1c3be/polygraphpress.html [L]
+RewriteRule ^polygraphpress/(\d+)/?$ /2ac9cd1c3be/polygraphpress_$1.html [L]
+RewriteRule ^polygraphpress/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^benefitsindustry/?$ /2ac9cd1c3be/benefitsindustry.html [L]
+RewriteRule ^benefitsindustry/(\d+)/?$ /2ac9cd1c3be/benefitsindustry_$1.html [L]
+RewriteRule ^benefitsindustry/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^faculty/?$ /2ac9cd1c3be/faculty.html [L]
+RewriteRule ^faculty/(\d+)/?$ /2ac9cd1c3be/faculty_$1.html [L]
+RewriteRule ^faculty/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^supply/?$ /2ac9cd1c3be/supply.html [L]
+RewriteRule ^supply/(\d+)/?$ /2ac9cd1c3be/supply_$1.html [L]
+RewriteRule ^supply/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^kittenonline/?$ /2ac9cd1c3be/kittenonline.html [L]
+RewriteRule ^kittenonline/(\d+)/?$ /2ac9cd1c3be/kittenonline_$1.html [L]
+RewriteRule ^kittenonline/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^poker_tournaments_world/?$ /2ac9cd1c3be/poker_tournaments_world.html [L]
+RewriteRule ^poker_tournaments_world/(\d+)/?$ /2ac9cd1c3be/poker_tournaments_world_$1.html [L]
+RewriteRule ^poker_tournaments_world/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^domeny/?$ /2ac9cd1c3be/domeny.html [L]
+RewriteRule ^domeny/(\d+)/?$ /2ac9cd1c3be/domeny_$1.html [L]
+RewriteRule ^domeny/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^thinker_world/?$ /2ac9cd1c3be/thinker_world.html [L]
+RewriteRule ^thinker_world/(\d+)/?$ /2ac9cd1c3be/thinker_world_$1.html [L]
+RewriteRule ^thinker_world/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^computergames/?$ /2ac9cd1c3be/computergames.html [L]
+RewriteRule ^computergames/(\d+)/?$ /2ac9cd1c3be/computergames_$1.html [L]
+RewriteRule ^computergames/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^daybed_business-services/?$ /2ac9cd1c3be/daybed_business-services.html [L]
+RewriteRule ^daybed_business-services/(\d+)/?$ /2ac9cd1c3be/daybed_business-services_$1.html [L]
+RewriteRule ^daybed_business-services/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^videospress/?$ /2ac9cd1c3be/videospress.html [L]
+RewriteRule ^videospress/(\d+)/?$ /2ac9cd1c3be/videospress_$1.html [L]
+RewriteRule ^videospress/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^statical-content/?$ /2ac9cd1c3be/statical-content.html [L]
+RewriteRule ^statical-content/(\d+)/?$ /2ac9cd1c3be/statical-content_$1.html [L]
+RewriteRule ^statical-content/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^research/?$ /2ac9cd1c3be/research.html [L]
+RewriteRule ^research/(\d+)/?$ /2ac9cd1c3be/research_$1.html [L]
+RewriteRule ^research/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^keyword_research/?$ /2ac9cd1c3be/keyword_research.html [L]
+RewriteRule ^keyword_research/(\d+)/?$ /2ac9cd1c3be/keyword_research_$1.html [L]
+RewriteRule ^keyword_research/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^romance/?$ /2ac9cd1c3be/romance.html [L]
+RewriteRule ^romance/(\d+)/?$ /2ac9cd1c3be/romance_$1.html [L]
+RewriteRule ^romance/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^juristindustry/?$ /2ac9cd1c3be/juristindustry.html [L]
+RewriteRule ^juristindustry/(\d+)/?$ /2ac9cd1c3be/juristindustry_$1.html [L]
+RewriteRule ^juristindustry/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^adventuresandnews/?$ /2ac9cd1c3be/adventuresandnews.html [L]
+RewriteRule ^adventuresandnews/(\d+)/?$ /2ac9cd1c3be/adventuresandnews_$1.html [L]
+RewriteRule ^adventuresandnews/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^manoeuvrableindustry/?$ /2ac9cd1c3be/manoeuvrableindustry.html [L]
+RewriteRule ^manoeuvrableindustry/(\d+)/?$ /2ac9cd1c3be/manoeuvrableindustry_$1.html [L]
+RewriteRule ^manoeuvrableindustry/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^progs/?$ /2ac9cd1c3be/progs.html [L]
+RewriteRule ^progs/(\d+)/?$ /2ac9cd1c3be/progs_$1.html [L]
+RewriteRule ^progs/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^other-sites_world/?$ /2ac9cd1c3be/other-sites_world.html [L]
+RewriteRule ^other-sites_world/(\d+)/?$ /2ac9cd1c3be/other-sites_world_$1.html [L]
+RewriteRule ^other-sites_world/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^criticism/?$ /2ac9cd1c3be/criticism.html [L]
+RewriteRule ^criticism/(\d+)/?$ /2ac9cd1c3be/criticism_$1.html [L]
+RewriteRule ^criticism/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^home_family/?$ /2ac9cd1c3be/home_family.html [L]
+RewriteRule ^home_family/(\d+)/?$ /2ac9cd1c3be/home_family_$1.html [L]
+RewriteRule ^home_family/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^hi-techsociety/?$ /2ac9cd1c3be/hi-techsociety.html [L]
+RewriteRule ^hi-techsociety/(\d+)/?$ /2ac9cd1c3be/hi-techsociety_$1.html [L]
+RewriteRule ^hi-techsociety/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^promotion-content/?$ /2ac9cd1c3be/promotion-content.html [L]
+RewriteRule ^promotion-content/(\d+)/?$ /2ac9cd1c3be/promotion-content_$1.html [L]
+RewriteRule ^promotion-content/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^sports/?$ /2ac9cd1c3be/sports.html [L]
+RewriteRule ^sports/(\d+)/?$ /2ac9cd1c3be/sports_$1.html [L]
+RewriteRule ^sports/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^fragrancesonline/?$ /2ac9cd1c3be/fragrancesonline.html [L]
+RewriteRule ^fragrancesonline/(\d+)/?$ /2ac9cd1c3be/fragrancesonline_$1.html [L]
+RewriteRule ^fragrancesonline/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^bankrollmarket/?$ /2ac9cd1c3be/bankrollmarket.html [L]
+RewriteRule ^bankrollmarket/(\d+)/?$ /2ac9cd1c3be/bankrollmarket_$1.html [L]
+RewriteRule ^bankrollmarket/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^incidentallypress/?$ /2ac9cd1c3be/incidentallypress.html [L]
+RewriteRule ^incidentallypress/(\d+)/?$ /2ac9cd1c3be/incidentallypress_$1.html [L]
+RewriteRule ^incidentallypress/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^magazines-sites/?$ /2ac9cd1c3be/magazines-sites.html [L]
+RewriteRule ^magazines-sites/(\d+)/?$ /2ac9cd1c3be/magazines-sites_$1.html [L]
+RewriteRule ^magazines-sites/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^openings/?$ /2ac9cd1c3be/openings.html [L]
+RewriteRule ^openings/(\d+)/?$ /2ac9cd1c3be/openings_$1.html [L]
+RewriteRule ^openings/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^neckties/?$ /2ac9cd1c3be/neckties.html [L]
+RewriteRule ^neckties/(\d+)/?$ /2ac9cd1c3be/neckties_$1.html [L]
+RewriteRule ^neckties/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^regularitypress/?$ /2ac9cd1c3be/regularitypress.html [L]
+RewriteRule ^regularitypress/(\d+)/?$ /2ac9cd1c3be/regularitypress_$1.html [L]
+RewriteRule ^regularitypress/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^discussion/?$ /2ac9cd1c3be/discussion.html [L]
+RewriteRule ^discussion/(\d+)/?$ /2ac9cd1c3be/discussion_$1.html [L]
+RewriteRule ^discussion/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^freelance/?$ /2ac9cd1c3be/freelance.html [L]
+RewriteRule ^freelance/(\d+)/?$ /2ac9cd1c3be/freelance_$1.html [L]
+RewriteRule ^freelance/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^biophysicsindustry/?$ /2ac9cd1c3be/biophysicsindustry.html [L]
+RewriteRule ^biophysicsindustry/(\d+)/?$ /2ac9cd1c3be/biophysicsindustry_$1.html [L]
+RewriteRule ^biophysicsindustry/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^paganism-information/?$ /2ac9cd1c3be/paganism-information.html [L]
+RewriteRule ^paganism-information/(\d+)/?$ /2ac9cd1c3be/paganism-information_$1.html [L]
+RewriteRule ^paganism-information/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^stylishsleepwear/?$ /2ac9cd1c3be/stylishsleepwear.html [L]
+RewriteRule ^stylishsleepwear/(\d+)/?$ /2ac9cd1c3be/stylishsleepwear_$1.html [L]
+RewriteRule ^stylishsleepwear/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^concerts/?$ /2ac9cd1c3be/concerts.html [L]
+RewriteRule ^concerts/(\d+)/?$ /2ac9cd1c3be/concerts_$1.html [L]
+RewriteRule ^concerts/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^articlescars/?$ /2ac9cd1c3be/articlescars.html [L]
+RewriteRule ^articlescars/(\d+)/?$ /2ac9cd1c3be/articlescars_$1.html [L]
+RewriteRule ^articlescars/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^stylizedfotos/?$ /2ac9cd1c3be/stylizedfotos.html [L]
+RewriteRule ^stylizedfotos/(\d+)/?$ /2ac9cd1c3be/stylizedfotos_$1.html [L]
+RewriteRule ^stylizedfotos/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^positional_sites/?$ /2ac9cd1c3be/positional_sites.html [L]
+RewriteRule ^positional_sites/(\d+)/?$ /2ac9cd1c3be/positional_sites_$1.html [L]
+RewriteRule ^positional_sites/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^cartelcontent/?$ /2ac9cd1c3be/cartelcontent.html [L]
+RewriteRule ^cartelcontent/(\d+)/?$ /2ac9cd1c3be/cartelcontent_$1.html [L]
+RewriteRule ^cartelcontent/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^drinks/?$ /2ac9cd1c3be/drinks.html [L]
+RewriteRule ^drinks/(\d+)/?$ /2ac9cd1c3be/drinks_$1.html [L]
+RewriteRule ^drinks/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^cryptozoology-on-line/?$ /2ac9cd1c3be/cryptozoology-on-line.html [L]
+RewriteRule ^cryptozoology-on-line/(\d+)/?$ /2ac9cd1c3be/cryptozoology-on-line_$1.html [L]
+RewriteRule ^cryptozoology-on-line/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^beer/?$ /2ac9cd1c3be/beer.html [L]
+RewriteRule ^beer/(\d+)/?$ /2ac9cd1c3be/beer_$1.html [L]
+RewriteRule ^beer/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^komp/?$ /2ac9cd1c3be/komp.html [L]
+RewriteRule ^komp/(\d+)/?$ /2ac9cd1c3be/komp_$1.html [L]
+RewriteRule ^komp/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+RewriteRule ^allindustriescontent/?$ /2ac9cd1c3be/allindustriescontent.html [L]
+RewriteRule ^allindustriescontent/(\d+)/?$ /2ac9cd1c3be/allindustriescontent_$1.html [L]
+RewriteRule ^allindustriescontent/([0-9]+).(php|htm|html)$ /2ac9cd1c3be/$1.$2 [L]
+
+
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+	
+	Options +FollowSymLinks
+	RewriteEngine On
+	RewriteCond %{HTTP_HOST} ^www.peredsvadboi\.ru$ [NC]
+	RewriteRule ^(.*)$ http://peredsvadboi.ru/$1 [R=301,L]
+	
+  # Block access to "hidden" directories whose names begin with a period. This
+  # includes directories used by version control systems such as Subversion or
+  # Git to store control files. Files whose names begin with a period, as well
+  # as the control files used by CVS, are protected by the FilesMatch directive
+  # above.
+  #
+  # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
+  # not possible to block access to entire directories from .htaccess, because
+  # <DirectoryMatch> is not allowed here.
+  #
+  # If you do not have mod_rewrite installed, you should remove these
+  # directories from your webroot or otherwise protect them from being
+  # downloaded.
+  RewriteRule "(^|/)\." - [F]
+
+  # If your site can be accessed both with and without the 'www.' prefix, you
+  # can use one of the following settings to redirect users to your preferred
+  # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+  #
+  # To redirect all users to access the site WITH the 'www.' prefix,
+  # (http://example.com/... will be redirected to http://www.example.com/...)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  #
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/... will be redirected to http://example.com/...)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /drupal
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+
+  # Pass all requests not referring directly to files in the filesystem to
+  # index.php. Clean URLs are handled in drupal_environment_initialize().
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  # Rules to correctly serve gzip compressed CSS and JS files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.css $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header append Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+php_flag display_errors off
+php_flag display_startup_errors off
+
